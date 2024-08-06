@@ -1,0 +1,17 @@
+name: Install Vercel Analytics
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install-analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Install Vercel Analytics
+        run: npm install @vercel/analytics
